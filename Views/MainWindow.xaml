@@ -5,23 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DirectoryAPP"
         mc:Ignorable="d"
-        Title="Directory APP" Icon="/Images/bookSmall.png" WindowStartupLocation="CenterScreen" Height="450" ResizeMode="CanResize" Width="1150">
+        Title="Directory APP"  Icon="/Images/bookSmall.png" WindowStartupLocation="CenterScreen" Height="450" ResizeMode="CanResize" Width="1150">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <StackPanel Background="#f0f0f0" Grid.Row="0" Orientation="Horizontal">
+        <StackPanel  RenderOptions.BitmapScalingMode="HighQuality" Background="#f0f0f0" Grid.Row="0" Orientation="Horizontal">
             <Button Name="personAdd" Width="80" Click="personAdd_Click" MouseEnter="ButtonMouse_Enter" MouseLeave="ButtonMouse_Leave">
                 <Grid>
-                    <Image x:Name="addImg" Source="/Images/add.png" Width="40" Margin="9,0,10,14"/>
+                    <Image x:Name="addImg" Source="/Images/add.png" Width="40px" Margin="9,0,10,14" />
                     <TextBlock HorizontalAlignment="Center" Margin="0,57,0,0" >Add</TextBlock>
                 </Grid>
             </Button>
             <Button Name="personEdit" Click="personEdit_Click" IsEnabled="{Binding SelectedPerson,TargetNullValue=False}" Width="80" MouseEnter="ButtonMouse_Enter" MouseLeave="ButtonMouse_Leave">
                 <Grid>
-                    <Image  x:Name="editImg" Source="/Images/edit.png" Width="40"  Margin="9,0,10,14"/>
+                    <Image x:Name="editImg" Source="/Images/edit.png" Width="40"  Margin="9,0,10,14" IsEnabled="False"/>
                     <TextBlock HorizontalAlignment="Center" Margin="0,57,0,0" >Edit</TextBlock>
                 </Grid>
             </Button>
@@ -31,10 +31,10 @@
                     <TextBlock HorizontalAlignment="Center" Margin="0,57,0,0" >Delete</TextBlock>
                 </Grid>
             </Button>
-            <Button Name="personAllEntriesDelete" Click="personAllEntriesDelete_Click" Width="80" MouseEnter="ButtonMouse_Enter" MouseLeave="ButtonMouse_Leave">
+            <Button Name="personAllEntriesDelete" Click="personAllEntriesDelete_Click" IsEnabled="{Binding TotalPerson}" Width="80" MouseEnter="ButtonMouse_Enter" MouseLeave="ButtonMouse_Leave">
                 <Grid>
                     <Image x:Name="personAllEntriesDeleteImg" Source="/Images/alldelete.png" Width="40" Margin="9,0,10,14"/>
-                    <TextBlock HorizontalAlignment="Center" Margin="0,57,0,0" >Delete All</TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,57,0,0">Delete All</TextBlock>
                 </Grid>
             </Button>
             <Button Name="about" Width="80" Click="about_Click" MouseEnter="ButtonMouse_Enter" MouseLeave="ButtonMouse_Leave">
@@ -45,7 +45,7 @@
             </Button>
             <Button Name="share" Width="80" Click="share_Click" MouseEnter="ButtonMouse_Enter" MouseLeave="ButtonMouse_Leave">
                 <Grid>
-                    <Image x:Name="shareImg" Width="40" Source="/Images/suggest.png"  Margin="9,0,10,14"/>
+                    <Image Stretch="Uniform" x:Name="shareImg" Width="40" Source="/Images/suggest.png"  Margin="9,0,10,14"/>
                     <TextBlock HorizontalAlignment="Center" Margin="0,57,0,0" >Share</TextBlock>
                 </Grid>
             </Button>
@@ -57,7 +57,7 @@
             </Button>
             <Button Name="settings" Width="80" Click="settings_Click" MouseEnter="SettingsButtonMouse_Enter" MouseLeave="SettingsButtonMouse_Leave">
                 <Grid>
-                    <Image x:Name="settingsImg" Source="/Images/settings.png" Width="40" Margin="9,0,10,14"/>
+                    <Image  x:Name="settingsImg" Source="/Images/settings.png" Width="40" Margin="9,0,10,14"/>
                     <TextBlock HorizontalAlignment="Center" Margin="0,57,0,0" >Settings</TextBlock>
                 </Grid>
             </Button>

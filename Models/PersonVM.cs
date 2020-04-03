@@ -22,6 +22,22 @@ namespace DirectoryAPP.Models
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(fieldName));
         }
 
+        public bool TotalPerson
+        {
+            get
+            {
+                return People.Count > 0 ? true : false;
+            }
+            set
+            {
+                if(value!= TotalPerson)
+                {
+                    TotalPerson = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
         private Person selectedPerson;
 
         public Person SelectedPerson

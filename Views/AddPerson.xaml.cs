@@ -29,6 +29,7 @@ namespace DirectoryAPP.Views
         {
             person = new Person() { AddedDate = DateTime.Now, Description = description.Text, Email = email.Text, FirstName = firstName.Text, LastName = lastName.Text, Job = job.Text, PhoneNumber = phoneNumber.Text };
             ((MainWindow)Application.Current.MainWindow).vm.AddPerson(person);
+            ((MainWindow)Application.Current.MainWindow).personAllEntriesDelete.IsEnabled = true; // if saved you can also delete all.
             this.Close();
         }
 

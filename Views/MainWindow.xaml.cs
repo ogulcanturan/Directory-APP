@@ -33,6 +33,7 @@ namespace DirectoryAPP
             vm.Initialize();
             DataContext = vm;
             InitializeComponent();
+            //personAllEntriesDelete.IsEnabled = vm.TotalPerson;
         }
 
         private void personAdd_Click(object sender, RoutedEventArgs e)
@@ -53,6 +54,7 @@ namespace DirectoryAPP
         private void personDelete_Click(object sender, RoutedEventArgs e)
         {
             vm?.RemovePerson(vm.SelectedPerson);
+            personAllEntriesDelete.IsEnabled = vm.TotalPerson; // Once deleting , check is there any person for deleting all?
         }
 
         private void personAllEntriesDelete_Click(object sender, RoutedEventArgs e)
@@ -65,6 +67,7 @@ namespace DirectoryAPP
             {
 
                 vm.RemoveAllPerson();
+                personAllEntriesDelete.IsEnabled = vm.TotalPerson;
 
             }
             else

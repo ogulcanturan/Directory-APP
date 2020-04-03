@@ -11,6 +11,7 @@
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
     <PackageIcon>bookSmall.png</PackageIcon>
     <PackageIconUrl />
+    <RepositoryUrl>https://github.com/ogulcanturan/Directory-App</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

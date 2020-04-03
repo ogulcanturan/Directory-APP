@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DirectoryAPP.Views"
         mc:Ignorable="d"
-        Title="Directory APP" Icon="/Images/bookSmall.png" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" Height="200" Width="350">
-    <Grid>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Image Width="180" Source="../Images/book.png" />
-            <TextBlock HorizontalAlignment="Center" FontFamily="Ink Free" FontWeight="Medium" FontSize="25" >Directory APP</TextBlock>
-            <ProgressBar BorderBrush="AliceBlue" IsIndeterminate="True" Foreground="Black"/>
-        </StackPanel>
-    </Grid>
+        Title="Directory APP" Icon="/Images/bookSmall.png" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" Height="194" Width="250">
+    <Border BorderThickness="1" Background="#396dd7" BorderBrush="#396dd7">
+        <Canvas>
+            <Image Source="../Images/book.png" Height="170" Margin="2 5 2 2" Canvas.Left="37" Canvas.Top="3" />
+            <ProgressBar BorderBrush="White" IsIndeterminate="True" Foreground="#ffde00" Margin="0 8" Height="10" Canvas.Top="178" Width="250"/>
+            <TextBlock FontFamily="Ink Free" FontWeight="Bold" Foreground="White" FontSize="25" Canvas.Left="48" Canvas.Top="135" >Directory APP</TextBlock>
+        </Canvas>
+    </Border>
 </Window>
