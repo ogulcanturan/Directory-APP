@@ -1,0 +1,57 @@
+﻿<Window x:Class="DirectoryApp.Views.Edit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DirectoryApp.Views"
+        mc:Ignorable="d"
+        Title="Edit" WindowStartupLocation="CenterScreen" Icon="/Images/bookSmall.png" Height="405" ResizeMode="NoResize" Width="384">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="Grid.Column" Value="0" />
+            <Setter Property="Width" Value="100" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="Grid.Column" Value="1" />
+        </Style>
+    </Window.Resources>
+    <Grid Width="Auto">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Email" Margin="5" />
+                <TextBox Width="200" Height="40" Name="email" Text="{Binding Path=Email,UpdateSourceTrigger=Explicit}" Margin="5" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="First Name" Margin="5" />
+                <TextBox Width="200" Height="40" Name="firstName" Text="{Binding Path=FirstName,UpdateSourceTrigger=Explicit}" Margin="5" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Last Name" Margin="5" />
+                <TextBox Width="200" Height="40" Name="lastName" Text="{Binding Path=LastName,UpdateSourceTrigger=Explicit}" Margin="5" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Job" Margin="5" />
+                <TextBox Width="200" Height="40" Name="job" Text="{Binding Path=Job,UpdateSourceTrigger=Explicit}" Margin="5" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Phone No" Margin="5" />
+                <TextBox Width="200" Height="40" Name="phoneNumber" Text="{Binding Path=PhoneNumber,UpdateSourceTrigger=Explicit}" Margin="5" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Description" Margin="5" />
+                <TextBox Width="200" Height="40" Name="description" Text="{Binding Path=Description,UpdateSourceTrigger=Explicit}" Margin="5" />
+            </StackPanel>
+            <StackPanel Margin="2,0,0,0" Orientation="Horizontal">
+                <Button FontSize="16" Margin="0,0,1,0" BorderBrush="Black" BorderThickness="1" Width="156.2" Height="40" Name="savePersonButton" Content="Save Person" Click="savePersonButton_Click"/>
+                <Button FontSize="16" Margin="0,0,1,0" BorderBrush="Black" BorderThickness="1" Width="156.2" Height="40" Name="cancelButton" Content="Cancel" Click="cancelButton_Click" />
+            </StackPanel>
+        </StackPanel>
+        <Border BorderThickness="0 1 0 0" BorderBrush="#a0a0a0"/>
+    </Grid>
+</Window>

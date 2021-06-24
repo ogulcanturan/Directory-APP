@@ -1,0 +1,16 @@
+﻿<Window x:Class="DirectoryApp.Views.SplashScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DirectoryApp.Views"
+        mc:Ignorable="d"
+        Title="Directory APP" Icon="/Images/bookSmall.png" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" Height="194" Width="250">
+    <Border BorderThickness="1" Background="#396dd7" BorderBrush="#396dd7">
+        <Canvas>
+            <Image Source="../Images/book.png" Height="170" Margin="2 5 2 2" Canvas.Left="37" Canvas.Top="3" />
+            <ProgressBar BorderBrush="White" IsIndeterminate="True" Foreground="#ffde00" Height="10" Canvas.Top="185" Canvas.Left="0" Width="250" Panel.ZIndex="1"/>
+            <TextBlock FontFamily="Ink Free" FontWeight="Bold" Foreground="White" FontSize="25" Canvas.Left="48" Canvas.Top="135" >DirectoryApp</TextBlock>
+        </Canvas>
+    </Border>
+</Window>
